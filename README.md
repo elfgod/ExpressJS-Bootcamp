@@ -74,6 +74,8 @@ Developers interested in using node as a webserver or using web sockets with Exp
 
 ## Section 3: Before Express
 
+### Folder 01: before-express
+
 ### 1. How the Internet Works - TCP and UDP
 
 ### 2. What is an HTTP request and how does it work?
@@ -95,7 +97,9 @@ Response or RES, is all the information we send back to the other computer we ar
 // Run curl to check the information of an HTTP request, response  
 `curl -v locahost:3000`
 
-## Section 3: Express 101
+## Section 4: Express 101
+
+### Folder 02: express101
 
 ### 1. Enter Express... the basics
 
@@ -119,3 +123,15 @@ Serving static files in Express
 To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 
 https://expressjs.com/en/starter/static-files.html#serving-static-files-in-express
+
+## Section 05: Express 201 - Middleware and Rendering
+
+### Folder 03: express202
+
+### 1. Middleware. (It's all Express really is.)
+
+res.locals
+
+Use this property to set variables accessible in templates rendered with res.render. The variables set on res.locals are available within a single request-response cycle, and will not be shared between requests.
+
+https://expressjs.com/en/5x/api.html#res.locals
