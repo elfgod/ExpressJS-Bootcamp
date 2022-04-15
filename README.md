@@ -135,3 +135,29 @@ res.locals
 Use this property to set variables accessible in templates rendered with res.render. The variables set on res.locals are available within a single request-response cycle, and will not be shared between requests.
 
 https://expressjs.com/en/5x/api.html#res.locals
+
+### 2. Putting on your Express helmet, and other awesome Express middleware
+
+express.json([options])
+
+This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
+
+https://expressjs.com/en/5x/api.html#express.json
+
+express.urlencoded([options])
+
+This is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser.
+
+https://expressjs.com/en/5x/api.html#express.urlencoded
+
+Production Best Practices: Security
+
+Use Helmet
+
+Helmet can help protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately.
+
+https://expressjs.com/en/advanced/best-practice-security.html#use-helmet
+
+https://helmetjs.github.io/
+
+`npm i helmet --save`
