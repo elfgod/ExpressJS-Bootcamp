@@ -61,3 +61,6 @@ For convention, Response is called res, and Request is called req
 
 Request or REQ, is all the information sended back from the other computer we are connecting to
 Response or RES, is all the information we send back to the other computer we are connecting to
+
+// Run curl to check the information of an HTTP request, response
+`curl -v locahost:3000`
