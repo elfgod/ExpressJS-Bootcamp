@@ -108,3 +108,14 @@ Response or RES, is all the information we send back to the other computer we ar
 ### 2. Basic Routing in Express
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+### 3. Serving Static Files in Express
+
+Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.  
+https://expressjs.com/en/5x/api.html#app.use
+
+Serving static files in Express
+
+To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
+
+https://expressjs.com/en/starter/static-files.html#serving-static-files-in-express
