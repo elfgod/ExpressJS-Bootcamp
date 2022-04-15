@@ -1,9 +1,41 @@
 # Just Express (with a bunch of node and http). In detail.
 
-No MERN or MEAN... just Express js. For those who've learned a bit about the most awesome node framework, and want more.
+No MERN or MEAN... just Express js. For those who've learned a bit about the most awesome node framework, and want more.  
 Instructor: **Robert Bunch**
 Course Repository:  
 https://github.com/robertbunch/justExpress
+
+### What you'll learn:
+
+- Express. That's (mostly) all we cover so when you finish, you'll know it!
+- Operate that Express Server as a REST API
+- Understand the basics of HTTP and the request/response cycle
+- Set up an Express server that can do anything Express can do!
+- Use that Express Server to render your front-end web pages with EJS, PUG, & handlebars
+
+### Description
+
+You have some notion of what Node, Express, and http are or you wouldn't be here. Node and back-end JavaScript have taken the world by storm, [SOME BIG COMPANY] moved to node and it changed the world, blah blah blah. One of the first things you're going to learn in any node course is about the Express module. But how much do you really learn about it? How to render a page in one template engine? How to make a get and a post route? Most MEAN and MERN stacks students I've met learned Express in a few breaths and then moved on to MongoDB, MySQL, Angular, React, or whatever was in the rest of the tech stack. What is http anyway? Should I even care? It's easy to get 2 inches deep and find you've accomplished your task, but in fact have no idea why it works or how you'd go further. That, in my opinion, is no good for someone who wants to be a great developer.
+
+I've had a lot of students ask for a course on just Express js because they were either overwhelmed when they learned it, or they can't find any detail on it to go further than beginner knowledge. That's what this course is for. We will go through the various pieces of Express in detail so you can know why it behaves the way it does and get the most out of it. Express 5 is currently in alpha, so when it hits beta or full release, and as questions come up, the course will expand accordingly!
+
+Note: this course is not a quick path to launch a webapp with Express/Node. You can get that in 10 minutes in many other places. This course is meant to take a longer, deeper look at what Express js actually does.
+
+I've been using Express since V.2, in 2012 and have seen it do just about everything. It is one of my favorite node modules and consistently one of the most downloaded on npm. There are other awesome technologies that patch into Express that get easily missed. This course will naturally lead into other things like websockets, webRTC, etc. Prepare for one of the most awesome node modules on npm!
+
+### Who this course is for:
+
+Beginner node developers who want to learn Express but overwhelmed by full MERN or MEAN courses
+Beginner node developers who need a review of JUST Express js
+Developers who want to go into the various pieces of Express in a little more depth without having to look at the docs
+Developers interested in using node as a webserver or using web sockets with Express
+
+### Requirements
+
+- You have a working knowledge of JavaScript (Not a ninja, but you should not be brand new).
+- You have at least run a Nodejs program before. I will cover some basics, but this is NOT an intro to node class.
+- You have basic command line knowledge (at least capable of navigating and running a program)
+- You have a computer capable of running Nodejs.
 
 ## Sections
 
@@ -33,7 +65,7 @@ https://github.com/robertbunch/justExpress
 - You have basic command line knowledge (at least capable of navigating and running a program)
 - You have a computer capable of running Nodejs.
 
-## Section 1: Iintroduction
+## Section 1: Introduction
 
 ## Section 2: Enviroment Setup (skip if you have node installed already)
 
@@ -51,16 +83,28 @@ https://github.com/robertbunch/justExpress
 // Install a code server listener  
 `npm install -g nodemon`
 
-// To run the code with nodemon just type
+This is a global dependency, so you can run it anywhere. it will always listen for changes in your files and restart the server automatically  
+// To run the code with nodemon just type  
 `nodemon expressServer.js`
-
-This is a global dependency, so you can run it anywhere. it will always listen for
-changes in your files and restart the server automatically
 
 For convention, Response is called res, and Request is called req
 
-Request or REQ, is all the information sended back from the other computer we are connecting to
+Request or REQ, is all the information sended back from the other computer we are connecting to  
 Response or RES, is all the information we send back to the other computer we are connecting to
 
-// Run curl to check the information of an HTTP request, response
+// Run curl to check the information of an HTTP request, response  
 `curl -v locahost:3000`
+
+## Section 3: Express 101
+
+### 1. Enter Express... the basics
+
+// This initializes the package.json file  
+`npm init -y`
+
+// This installs express into the package.json file  
+`npm install express --save`
+
+### 2. Basic Routing in Express
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
