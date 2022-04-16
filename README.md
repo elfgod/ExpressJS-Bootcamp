@@ -181,7 +181,19 @@ app.set(name, value)
 Assigns setting name to value. You may store any value that you want, but certain names can be used to configure the behavior of the server. These special names are listed in the app settings table.  
 https://expressjs.com/en/api.html#app.set
 
-// Install EJS template engine
-`npm install ejs --save`
-`npm install hbs --save`
+// Install EJS template engine  
+`npm install ejs --save`  
+`npm install hbs --save`  
 `npm install pug --save`
+
+### 5. Helmet Note
+
+If you get "Refused to load the script..." in the next lecture, you need to tell Helmet to not load the contentSecurityPolicy like so:
+
+```
+    app.use(helmet({
+        contentSecurityPolicy: false,
+    }));
+```
+
+Helmet is great, but it can be a little over zealous at times :)
