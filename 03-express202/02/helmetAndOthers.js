@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-// const helmet = require('helmet')
+const helmet = require('helmet')
 
-// app.use(helmet())
+app.use(helmet())
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -16,7 +16,7 @@ app.post('/ajax', (req, res) => {
   // console.log(req)
   console.log(req.headers)
   console.log(req.body)
-  res.json(['test', 1, 2, 3, 4])
+  res.send('test')
 })
 
 app.listen(3000)

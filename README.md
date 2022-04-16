@@ -161,3 +161,15 @@ https://expressjs.com/en/advanced/best-practice-security.html#use-helmet
 https://helmetjs.github.io/
 
 `npm i helmet --save`
+
+### 3. Responding with JSON
+
+res.json([body])
+
+Sends a JSON response. This method sends a response (with the correct content-type) that is the parameter converted to a JSON string using JSON.stringify().
+
+https://expressjs.com/en/api.html#res.json
+
+// Problems with security with helmet while using json  
+// comment the helmet library so you can continue to use json
+https://stackoverflow.com/questions/63643775/content-security-policy-the-page-s-settings-blocked-the-loading-of-a-resource-a
