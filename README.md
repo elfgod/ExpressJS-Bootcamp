@@ -173,3 +173,15 @@ https://expressjs.com/en/api.html#res.json
 // Problems with security with helmet while using json  
 // comment the helmet library so you can continue to use json
 https://stackoverflow.com/questions/63643775/content-security-policy-the-page-s-settings-blocked-the-loading-of-a-resource-a
+
+### 4. Wiring up Express with a view engine
+
+app.set(name, value)
+
+Assigns setting name to value. You may store any value that you want, but certain names can be used to configure the behavior of the server. These special names are listed in the app settings table.  
+https://expressjs.com/en/api.html#app.set
+
+// Install EJS template engine
+`npm install ejs --save`
+`npm install hbs --save`
+`npm install pug --save`
