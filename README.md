@@ -126,7 +126,7 @@ https://expressjs.com/en/starter/static-files.html#serving-static-files-in-expre
 
 ## Section 05: Express 201 - Middleware and Rendering
 
-### Folder 03: express202
+### Folder 03: express201
 
 ### 1. Middleware. (It's all Express really is.)
 
@@ -203,3 +203,13 @@ Helmet is great, but it can be a little over zealous at times :)
 - EJS https://ejs.co/
 - HandleBars https://handlebarsjs.com/
 - Jade/Pug https://pugjs.org/
+
+## Section 06: Express 301 - Rq & Res revisited, the router, and the express generator
+
+### Folder 03: express301
+
+### 1. Getting data from the request object - forms and cookies
+
+cookie-parser:  
+https://www.npmjs.com/package/cookie-parser  
+`npm i cookie-parser --save`
