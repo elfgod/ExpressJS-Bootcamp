@@ -25,8 +25,26 @@ app.set('views', path.join(__dirname, 'views'))
 // 6. the final resulf of this proceess is a compiled product of the things the browser can read
 // - HTML, CSS, JS
 
+function validateUser(req, res, next) {
+  // ... validate logic
+  res.locals.validated = true
+  next()
+}
+
+app.use(validateUser)
+
+app.get('/about', (req, res, next) => {
+  res.render('about', {})
+})
+
 app.get('/', (req, res, next) => {
-  res.render('index')
+  // The data in the 2nd arg, is going to be appened to res.locals
+  res.render('index', {
+    msg1: 'success',
+    msg2: 'failure',
+    // HTML came from the DB and we want to drop it in the template
+    html: `<p><img src="data:image/png;base64,https://1.bp.blogspot.com/-FF931kg8Lhk/WXuSvFWuVxI/AAAAAAAAAWQ/ZMgRHMmwcioLXDSkZ5XHW1etUFRK3ua6gCLcBGAs/s1600/goku_super_saiyan_3_dicross_by_nekoar-danagpg.png" /></p>`,
+  })
 })
 
 app.listen(3000)

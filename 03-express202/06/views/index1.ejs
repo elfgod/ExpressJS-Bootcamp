@@ -1,0 +1,18 @@
+<h1>Rendered file! EJS</h1>
+
+<% for(let i = 0; i < 10; i++) { %>
+<li>test</li>
+<% } %>
+
+<br />
+
+<% for(let i = 0; i < 10; i++) { %> <% if ( i % 2 === 0 ) { txt = "even" %> <% }
+else { txt = "odd" } %>
+<li><%= i %> - <%= txt %></li>
+<% } %>
+
+<!-- <script>
+  for (let i = 0; i < 10; i++) {
+    document.write(`<li>test</li>`)
+  }
+</script> -->
