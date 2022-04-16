@@ -1,0 +1,25 @@
+<h1>HBS HandleBars</h1>
+{{{html}}}
+
+your message is:
+{{msg2}}
+{{!-- !!!! Country name:
+{{country.name}}
+Country capital:
+{{country.capital}} --}}
+
+<!-- this will show up in the DOM -->
+{{! this is a comment in handleBars }}
+{{! each, if, unless }}
+
+{{#each countries}}
+  {{#if this.western}}
+    <li>{{this.name}} -- {{this.capital}}</li>
+  {{/if}}
+{{/each}}
+<br />
+{{#each countries}}
+  {{#unless this.western}}
+    <li>{{this.name}} -- {{this.capital}}</li>
+  {{/unless}}
+{{/each}}

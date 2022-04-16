@@ -197,3 +197,9 @@ If you get "Refused to load the script..." in the next lecture, you need to tell
 ```
 
 Helmet is great, but it can be a little over zealous at times :)
+
+### 6. Template Engines
+
+- EJS https://ejs.co/
+- HandleBars https://handlebarsjs.com/
+- Jade/Pug https://pugjs.org/

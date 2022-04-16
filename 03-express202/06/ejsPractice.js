@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'viewsEJS'))
 
 // 4. We pass that res.render 2 things:
 // - the file we want to use
