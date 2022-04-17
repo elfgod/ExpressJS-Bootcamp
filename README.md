@@ -300,17 +300,41 @@ res.set({
    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
 
 2. req.fresh
-   When the response is still “fresh” in the client’s cache true is returned, otherwise false is returned to indicate that the client cache is now stale and the full response should be sent.
+   When the response is still “fresh” in the client’s cache true is returned, otherwise false is returned to indicate that the client cache is now stale and the full response should be sent.  
    https://expressjs.com/en/5x/api.html#req.fresh
 
 3. req.stale
-   Indicates whether the request is “stale,” and is the opposite of req.fresh.
+   Indicates whether the request is “stale,” and is the opposite of req.fresh.  
    https://expressjs.com/en/5x/api.html#req.stale
 
 4. req.accepts(types)
-   Checks if the specified content types are acceptable, based on the request’s Accept HTTP header field. The method returns the best match, or if none of the specified content types is acceptable, returns false (in which case, the application should respond with 406 "Not Acceptable").
+   Checks if the specified content types are acceptable, based on the request’s Accept HTTP header field. The method returns the best match, or if none of the specified content types is acceptable, returns false (in which case, the application should respond with 406 "Not Acceptable").  
    https://expressjs.com/en/5x/api.html#req.accepts
 5. res.append(field [, value])
    res.append() is supported by Express v4.11.0+
    Appends the specified value to the HTTP response header field. If the header is not already set, it creates the header with the specified value. The value parameter can be a string or an array.  
    https://expressjs.com/en/5x/api.html#res.append
+
+## Section 06: Starter Project - Movie Fan App
+
+## Section 06: Express 301 - Rq & Res revisited, the router, and the express generator
+
+### Folder 04: express301
+
+API key and link for the next lecture
+
+API key: 1fb720b97cc13e580c2c35e1138f90f8ElfGod
+
+If you want to get your own (or this stops working), sign up here: https://www.themoviedb.org/documentation/api?language=en-US
+
+API Docs: https://developers.themoviedb.org/3/getting-started/introduction
+
+Starter files: https://github.com/ridiculous-inc/justExpress/tree/master/starterFiles/movieAppProj1
+
+```
+const apiBaseUrl = 'http://api.themoviedb.org/3';
+const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
+const imageBaseUrl = 'http://image.tmdb.org/t/p/w300';
+```
+
+### Folder 04: express301
