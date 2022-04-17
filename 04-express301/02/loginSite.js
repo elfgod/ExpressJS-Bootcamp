@@ -6,6 +6,7 @@ const app = express()
 const cookieParser = require('cookie-parser')
 
 const helmet = require('helmet')
+const { fileURLToPath } = require('url')
 app.use(
   helmet({
     contentSecurityPolicy: false,

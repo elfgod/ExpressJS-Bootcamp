@@ -218,3 +218,12 @@ https://www.npmjs.com/package/cookie-parser
 
 res.download(path [, filename] [, options] [, fn])  
 https://expressjs.com/en/4x/api.html#res.download
+
+### 3. The Router
+
+express.Router([options])  
+https://expressjs.com/en/4x/api.html#express.router
+
+Router  
+A router object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.  
+https://expressjs.com/en/4x/api.html#router
