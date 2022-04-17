@@ -206,7 +206,7 @@ Helmet is great, but it can be a little over zealous at times :)
 
 ## Section 06: Express 301 - Rq & Res revisited, the router, and the express generator
 
-### Folder 03: express301
+### Folder 04: express301
 
 ### 1. Getting data from the request object - forms and cookies
 
@@ -227,3 +227,27 @@ https://expressjs.com/en/4x/api.html#express.router
 Router  
 A router object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.  
 https://expressjs.com/en/4x/api.html#router
+
+### 4. The Express Generator
+
+Express application generator  
+Use the application generator tool, express-generator, to quickly create an application skeleton.  
+https://expressjs.com/en/starter/generator.html#express-application-generator  
+`npm install -g express-generator`  
+To check there it was installed in a linux machine  
+`which express`
+
+Creates a new directory, with an App.js, Routes folder with routes  
+A public folder, and all the stuff almost like ready to use
+
+```
+express myNewExpressSite
+cd myNewExpressSite
+npm install
+nodemon
+```
+
+### Folder 05: myNewExpressSite
+
+Creates boilderplate express app with EJS template engine  
+`express ejsSite --view-ejs`
