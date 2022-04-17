@@ -213,3 +213,8 @@ Helmet is great, but it can be a little over zealous at times :)
 cookie-parser:  
 https://www.npmjs.com/package/cookie-parser  
 `npm i cookie-parser --save`
+
+### 2. Sending files, and headers already sent!
+
+res.download(path [, filename] [, options] [, fn])  
+https://expressjs.com/en/4x/api.html#res.download
