@@ -232,10 +232,24 @@ https://expressjs.com/en/4x/api.html#router
 
 Express application generator  
 Use the application generator tool, express-generator, to quickly create an application skeleton.  
-https://expressjs.com/en/starter/generator.html#express-application-generator  
+https://expressjs.com/en/starter/generator.html#express-application-generator
+
+Starter fullstack template engine EJS, with no global install using NPX  
+`npx express-generator --view=ejs myAppEJS`
+
+You can run the application generator with the npx command (available in Node.js 8.2.0).  
+`npx express-generator`  
+For earlier Node versions, install the application generator as a global npm package and then launch it:  
 `npm install -g express-generator`  
 To check there it was installed in a linux machine  
-`which express`
+`which express`  
+To uninstall a global dependency
+
+```
+npm uninstall -g <package-name>
+# example
+npm uninstall -g webpack
+```
 
 Creates a new directory, with an App.js, Routes folder with routes  
 A public folder, and all the stuff almost like ready to use
@@ -251,3 +265,52 @@ nodemon
 
 Creates boilderplate express app with EJS template engine  
 `express ejsSite --view-ejs`
+
+### 5. STOP - Checklist Update and Short Review
+
+We have 2 app.get:
+
+1. app.get(name)
+   Returns the value of name app setting, where name is one of the strings in the app settings table.  
+   https://expressjs.com/en/4x/api.html#app.get
+
+2. app.get(path, callback [, callback ...])  
+   Routes HTTP GET requests to the specified path with the specified callback functions.  
+   https://expressjs.com/en/4x/api.html#app.get.method
+
+### 6. Don't fear the HTTP headers!!
+
+**Most Important**
+
+res.set(field [, value])  
+Sets the response’s HTTP header field to value. To set multiple fields at once, pass an object as the parameter.
+
+```
+res.set('Content-Type', 'text/plain')
+
+res.set({
+  'Content-Type': 'text/plain',
+  'Content-Length': '123',
+  ETag: '12345'
+})
+```
+
+1. Cache-Control  
+   The Cache-Control HTTP header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs).  
+   https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+2. req.fresh
+   When the response is still “fresh” in the client’s cache true is returned, otherwise false is returned to indicate that the client cache is now stale and the full response should be sent.
+   https://expressjs.com/en/5x/api.html#req.fresh
+
+3. req.stale
+   Indicates whether the request is “stale,” and is the opposite of req.fresh.
+   https://expressjs.com/en/5x/api.html#req.stale
+
+4. req.accepts(types)
+   Checks if the specified content types are acceptable, based on the request’s Accept HTTP header field. The method returns the best match, or if none of the specified content types is acceptable, returns false (in which case, the application should respond with 406 "Not Acceptable").
+   https://expressjs.com/en/5x/api.html#req.accepts
+5. res.append(field [, value])
+   res.append() is supported by Express v4.11.0+
+   Appends the specified value to the HTTP response header field. If the header is not already set, it creates the header with the specified value. The value parameter can be a string or an array.  
+   https://expressjs.com/en/5x/api.html#res.append
