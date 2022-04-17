@@ -22,11 +22,33 @@ app.use(cookieParser())
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
+app.use((req, res, next) => {
+  if (req.query.msg === 'fail') {
+    res.locals.msg =
+      'Sorry, This username and password combination does not exist'
+  } else {
+    res.locals.msg = ``
+  }
+  // Send me on to the next piece of middleware
+  next()
+})
+
 app.get('/', (req, res, next) => {
   res.render('sanity check')
 })
 
 app.get('/login', (req, res, next) => {
+  // the req object has a query property in Express
+  // req.query is an object, with a property of every key in the query string
+  // The query string is where you put insecure data
+  // console.log(req.query)
+  // res.render('login', { msg: 'Hello!' })
+
+  // without middleware
+  // const msg = req.query.msg
+  // if(msg === 'fail') {
+  //   // run some other function
+  // }
   res.render('login')
 })
 
@@ -46,7 +68,8 @@ app.post('/process_login', (req, res, next) => {
     // 1. where to send the browser user
     res.redirect('/welcome')
   } else {
-    res.redirect('/login?msg=fail')
+    // The "?" is a special character in a URL, it is used to add query parameters
+    res.redirect('/login?msg=fail&test=hello')
   }
   // res.json(req.body)
   // res.json('test')
