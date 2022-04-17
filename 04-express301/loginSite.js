@@ -6,6 +6,10 @@ const app = express()
 const cookieParser = require('cookie-parser')
 
 const helmet = require('helmet')
+const { Router } = require('express')
+const {
+  default: strictTransportSecurity,
+} = require('helmet/dist/types/middlewares/strict-transport-security')
 app.use(
   helmet({
     contentSecurityPolicy: false,
@@ -83,6 +87,43 @@ app.get('/welcome', (req, res, next) => {
     username: req.cookies.username,
   })
 })
+
+// app.param() - takes 2 args:
+// 1. param to look for in the route
+// 2. the callback to run (with the usuals)
+app.param('id', (req, res, next, id) => {
+  console.log('Params called: ', id)
+  // res.send(`id is ${id}`)
+  // if id has something to do with stories...
+  // if id has something to do with blog...
+  next()
+})
+
+// In a route, anytime something has a : in front it is a wildcard
+// wildcard, will match anything in that slot
+app.get('/story/:id', (req, res, next) => {
+  // the req.params object always exists
+  // it will have a property for each wildcard in the route
+  res.send(`<h1>Story ${req.params.id}</h1>`)
+  // res.send('<h1>Story 1</h1>')
+})
+
+// This will never run because it matches above (without next())
+// app.get('/story/:blogId/, (req, res, next) => {
+
+app.get('/story/:storyId/:link', (req, res, next) => {
+  // the req.params object always exists
+  // it will have a property for each wildcard in the route
+  res.send(`<h1>Story ${req.params.storyId} - ${req.params.link}</h1>`)
+  // res.send('<h1>Story 1</h1>')
+})
+
+// Removing a wildcard in the link
+// app.get('/story/:storyId/link', (req, res, next) => {
+
+// app.get('/story/1', (req, res, next) => {
+//   res.send('<h1>Story 1</h1>')
+// })
 
 app.get('/logout', (req, res, next) => {
   // res.clearCookie takes 1 arg:
