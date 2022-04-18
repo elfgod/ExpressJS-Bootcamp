@@ -315,11 +315,9 @@ res.set({
    Appends the specified value to the HTTP response header field. If the header is not already set, it creates the header with the specified value. The value parameter can be a string or an array.  
    https://expressjs.com/en/5x/api.html#res.append
 
-## Section 06: Starter Project - Movie Fan App
+## Section 07: Starter Project - Movie Fan App
 
-## Section 06: Express 301 - Rq & Res revisited, the router, and the express generator
-
-### Folder 04: express301
+### Folder 06: movieFanSite
 
 API key and link for the next lecture
 
@@ -337,4 +335,15 @@ const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
 const imageBaseUrl = 'http://image.tmdb.org/t/p/w300';
 ```
 
-### Folder 04: express301
+### 1. Adding the request module
+
+https://www.npmjs.com/package/request
+`npm i request`
+
+Create account and get API key
+
+1. https://www.themoviedb.org
+2. Create an account
+3. Go to the Developers Section, https://developers.themoviedb.org/4/getting-started/authorization
+4. Go to the Settings API, https://www.themoviedb.org/settings/api
+5. Fill out the information and that's it!

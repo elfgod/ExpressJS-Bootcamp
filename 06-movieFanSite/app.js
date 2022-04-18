@@ -6,24 +6,42 @@ var path = require('path')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
-const helmet = require('helmet')
+// const helmet = require('helmet')
 // app.use(
 //   helmet({
 //     contentSecurityPolicy: false,
 //   })
 // )
 
-app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      'img-src': ["'self'", 'https: data:'],
-    },
-  }),
-  helmet.crossOriginResourcePolicy({
-    policy: 'cross-origin',
-  })
-)
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     useDefaults: true,
+//     directives: {
+//       'img-src': ["'self'", 'https: data:'],
+//     },
+//   }),
+//   helmet.crossOriginResourcePolicy({
+//     policy: 'cross-origin',
+//   })
+// )
+
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: {
+//       directives: {
+//         defaultSrc: ["'self'"],
+//         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
+//         fontSrc: ["'self'", 'https:', 'data:'],
+//         imgSrc: ["'self'", 'https://image.tmdb.org'],
+//         scriptSrc: ["'self'", "'unsafe-inline'"],
+//         blockAllMixedContent: [],
+//         upgradeInsecureRequests: [],
+//         baseUri: ["'self'"],
+//         frameAncestors: ["'self'"],
+//       },
+//     },
+//   })
+// )
 
 var indexRouter = require('./routes/index')
 
