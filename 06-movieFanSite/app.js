@@ -7,9 +7,21 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 
 const helmet = require('helmet')
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: false,
+//   })
+// )
+
 app.use(
-  helmet({
-    contentSecurityPolicy: false,
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      'img-src': ["'self'", 'https: data:'],
+    },
+  }),
+  helmet.crossOriginResourcePolicy({
+    policy: 'cross-origin',
   })
 )
 
