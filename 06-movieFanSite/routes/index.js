@@ -11,9 +11,11 @@ const request = require('request')
 // eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhODE1ZjkxMzcwZjZiOWQ5MDQ3NDI5ZTczYjBhMWI2YyIsInN1YiI6IjYyNWM5OTJhMjI5YWUyMTljOTI3ZTIzZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-zCnkD9iywgwTT7hqrSVvl4sGRi8wCYgK0jMnxRCW4
 
 // API Key (v3 auth)
-const apiKey = 'a815f91370f6b9d9047429e73b0a1b6c'
+// const apiKey = 'a815f91370f6b9d9047429e73b0a1b6c'
+const apiKey = '123456789'
 
-const apiBaseUrl = 'http://api.themoviedb.org/3'
+// const apiBaseUrl = 'http://api.themoviedb.org/3'
+const apiBaseUrl = 'http://localhost:3030'
 const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`
 const imageBaseUrl = 'http://image.tmdb.org/t/p/w300'
 

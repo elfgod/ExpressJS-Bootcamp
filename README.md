@@ -347,3 +347,5 @@ Create account and get API key
 3. Go to the Developers Section, https://developers.themoviedb.org/4/getting-started/authorization
 4. Go to the Settings API, https://www.themoviedb.org/settings/api
 5. Fill out the information and that's it!
+
+## Section 08: Project - Building an API
