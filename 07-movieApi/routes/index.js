@@ -23,7 +23,12 @@ router.get('/most_popular', function (req, res, next) {
     const indexToStart = (page - 1) * 20
     results = results.slice(indexToStart, indexToStart + 19)
     // res.json(results) // an array
-    res.json({ results }) // an object
+    // res.json({ results }) // an object
+    res.json({
+      // page: req.query.page // this comes from here
+      page,
+      results,
+    })
   }
 })
 

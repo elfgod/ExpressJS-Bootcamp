@@ -17,7 +17,7 @@ const apiKey = '123456789'
 // const apiBaseUrl = 'http://api.themoviedb.org/3'
 const apiBaseUrl = 'http://localhost:3030'
 // const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`
-const nowPlayingUrl = `${apiBaseUrl}/movie/most_popular?api_key=${apiKey}`
+const nowPlayingUrl = `${apiBaseUrl}/most_popular?api_key=${apiKey}`
 const imageBaseUrl = 'http://image.tmdb.org/t/p/w300'
 
 router.use((req, res, next) => {
