@@ -13,6 +13,17 @@ const searchRouter = require('./routes/search')
 
 var app = express()
 
+app.use((req, res, next) => {
+  // cut of the response if the api key is bad
+  if (req.query.api_key != '123456789') {
+    // these are not the droids we're looking for
+    res.status(401) // Unauthorized = 401, NOT a 200
+    res.json('invalid API Key')
+  } else {
+    next()
+  }
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
