@@ -1,7 +1,15 @@
 var express = require('express')
+const { route } = require('express/lib/application')
 var router = express.Router()
 
 const movieDetails = require('../data/movieDetails')
+
+router.param('movieId', (req, res, next) => {
+  // if only certain apiKeys are allowed to hit movieId
+  // update the db with analytics data
+  console.log('Someone hit a route that used the movieId wildcard')
+  next()
+})
 
 /* GET movie page. */
 // /movies/...
@@ -40,6 +48,15 @@ router.get('/:movieId', (req, res, next) => {
 })
 
 // POST /movie/{movie_id}/rating
+router.post('/:movieId/rating', (req, res, next) => {
+  const movieId = req.params.movieId
+  // console.log(req.get('content-type'))
+  if (!req.is('application/json')) {
+    res.json({ msg: 'Content type must be application/json' })
+  } else {
+    res.json('test')
+  }
+})
 
 // DELETE /movie/{movie_id}/rating
 
