@@ -4,6 +4,15 @@ var router = express.Router()
 
 const movieDetails = require('../data/movieDetails')
 
+function requireJSON(req, res, next) {
+  if (!req.is('application/json')) {
+    res.json({ msg: 'Content type must be application/json' })
+  } else {
+    // res.json('test')
+    next()
+  }
+}
+
 router.param('movieId', (req, res, next) => {
   // if only certain apiKeys are allowed to hit movieId
   // update the db with analytics data
@@ -48,16 +57,30 @@ router.get('/:movieId', (req, res, next) => {
 })
 
 // POST /movie/{movie_id}/rating
-router.post('/:movieId/rating', (req, res, next) => {
+router.post('/:movieId/rating', requireJSON, (req, res, next) => {
   const movieId = req.params.movieId
   // console.log(req.get('content-type'))
-  if (!req.is('application/json')) {
-    res.json({ msg: 'Content type must be application/json' })
+  const userRating = req.body.value
+  if (userRating < 0.5 || userRating > 10) {
+    res.json({
+      msg: 'Rating must be between 0.5 and 10',
+    })
   } else {
-    res.json('test')
+    res.json({
+      msg: 'Thank you for submitting your rating',
+      status_code: 200,
+    })
   }
 })
 
 // DELETE /movie/{movie_id}/rating
+router.delete('/:movieId/rating', requireJSON, (req, res, next) => {
+  res.json({ msg: 'Rating deleted' })
+  // const movieId = req.params.movieId
+  // res.json({
+  //   msg: "Your rating has been deleted",
+  //   status_code: 200
+  // })
+})
 
 module.exports = router
