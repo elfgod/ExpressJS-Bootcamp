@@ -349,3 +349,20 @@ Create account and get API key
 5. Fill out the information and that's it!
 
 ## Section 08: Project - Building an API
+
+Nothing added here
+
+## Section 09: Supplemental: Passport
+
+### 1. Passport and the github Strategy
+
+Intro to Passport:  
+https://www.passportjs.org/
+https://www.npmjs.com/package/passport  
+`npm i passport`
+
+https://www.passportjs.org/concepts/authentication/middleware/
+
+passport-github:  
+https://www.passportjs.org/packages/passport-github2/  
+`npm install passport-github2`
