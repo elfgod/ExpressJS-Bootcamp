@@ -350,6 +350,9 @@ Nothing added here
 
 ### 1. Passport and the github Strategy
 
+Passport GitHub example:  
+https://github.com/cfsghost/passport-github/blob/master/examples/login/app.js
+
 Intro to Passport:  
 https://www.passportjs.org/  
 https://www.npmjs.com/package/passport  
@@ -363,3 +366,7 @@ https://www.passportjs.org/packages/passport-github2/
 
 Register a new OAuth application  
 https://github.com/settings/applications/new
+
+express-session  
+https://www.npmjs.com/package/express-session  
+`npm i express-session`

@@ -15,6 +15,11 @@ router.use((req, res, next) => {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  console.log('User info please!!')
+  // console.log(req)
+  console.log(req.user)
+  console.log({ user: req.user })
+  // const { username } = req.user
   request.get(nowPlayingUrl, (error, response, movieData) => {
     const parsedData = JSON.parse(movieData)
     res.render('index', {
@@ -23,18 +28,29 @@ router.get('/', function (req, res, next) {
   })
 })
 
-router.get('/login', passport.authenticate('github'))
+// router.get('/login', passport.authenticate('github'))
+router.get('/login', passport.authenticate('github', { scope: ['user:email'] }))
 
-app.post(
-  '/login/password',
-  passport.authenticate('local', {
-    failureRedirect: '/login',
-    failureMessage: true,
-  }),
+router.get('/favorites', (req, res, next) => {
+  res.json(req.user.displayName)
+})
+
+router.get(
+  '/auth',
+  passport.authenticate('github', { failureRedirect: '/login' }),
   function (req, res) {
-    res.redirect('/~' + req.user.username)
+    // Successful authentication, redirect home.
+    res.redirect('/')
   }
 )
+
+// router.get(
+//   '/auth',
+//   passport.authenticate('github', {
+//     successRedirect: '/',
+//     failureRedirect: '/loginFailed',
+//   })
+// )
 
 router.get('/movie/:id', (req, res, next) => {
   // res.json(req.params.id)
