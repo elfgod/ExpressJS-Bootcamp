@@ -344,9 +344,11 @@ Create account and get API key
 
 ## Section 08: Project - Building an API
 
-Nothing added here
+### Folder 07: movieApi
 
 ## Section 09: Supplemental: Passport
+
+### Folder 08: moviePassport
 
 ### 1. Passport and the github Strategy
 
@@ -367,6 +369,21 @@ https://www.passportjs.org/packages/passport-github2/
 Register a new OAuth application  
 https://github.com/settings/applications/new
 
+Dotenv tutorial: to save the giyhub client id and secret  
+https://zetcode.com/javascript/dotenv/
+
 express-session  
 https://www.npmjs.com/package/express-session  
 `npm i express-session`
+
+## Section 10: Supplemental: DB connection
+
+### Folder 09: postgresConn
+
+### 1. Basics of the PostGres module w/Express
+
+node-postgres  
+Full docs at: https://node-postgres.com/  
+Non-blocking PostgreSQL client for Node.js. Pure JavaScript and optional native libpq bindings.  
+https://www.npmjs.com/package/pg  
+`npm i pg`
