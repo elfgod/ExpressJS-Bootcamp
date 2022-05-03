@@ -7,35 +7,22 @@ https://github.com/robertbunch/justExpress
 
 ### What you'll learn:
 
-- Express. That's (mostly) all we cover so when you finish, you'll know it!
-- Operate that Express Server as a REST API
-- Understand the basics of HTTP and the request/response cycle
-- Set up an Express server that can do anything Express can do!
-- Use that Express Server to render your front-end web pages with EJS, PUG, & handlebars
+- Understand the why engineers would want to create an app with Ethereum
+- Design, test, and deploy secure Smart Contracts
+- Use the latest version of Ethereum development tools (Web3 v1.0)
+- Build compelling blockchain applications using the Ethereum Blockchain
+- Learn the true purpose and capabilities of Ethereum and Solidity
+- See practical examples to comprehend what the blockchain and mining are
 
 ### Description
 
 You have some notion of what Node, Express, and http are or you wouldn't be here. Node and back-end JavaScript have taken the world by storm, [SOME BIG COMPANY] moved to node and it changed the world, blah blah blah. One of the first things you're going to learn in any node course is about the Express module. But how much do you really learn about it? How to render a page in one template engine? How to make a get and a post route? Most MEAN and MERN stacks students I've met learned Express in a few breaths and then moved on to MongoDB, MySQL, Angular, React, or whatever was in the rest of the tech stack. What is http anyway? Should I even care? It's easy to get 2 inches deep and find you've accomplished your task, but in fact have no idea why it works or how you'd go further. That, in my opinion, is no good for someone who wants to be a great developer.
 
-I've had a lot of students ask for a course on just Express js because they were either overwhelmed when they learned it, or they can't find any detail on it to go further than beginner knowledge. That's what this course is for. We will go through the various pieces of Express in detail so you can know why it behaves the way it does and get the most out of it. Express 5 is currently in alpha, so when it hits beta or full release, and as questions come up, the course will expand accordingly!
+I've had a lot of students ask for a course on **just Express js** because they were either overwhelmed when they learned it, or they can't find any detail on it to go further than beginner knowledge. That's what this course is for. We will go through the various pieces of Express in detail so you can know why it behaves the way it does and get the most out of it. Express 5 is currently in alpha, so when it hits beta or full release, and as questions come up, the course will expand accordingly!
 
-Note: this course is not a quick path to launch a webapp with Express/Node. You can get that in 10 minutes in many other places. This course is meant to take a longer, deeper look at what Express js actually does.
+**Note:** this course is not a quick path to launch a webapp with Express/Node. You can get that in 10 minutes in many other places. This course is meant to take a longer, deeper look at what Express js actually does.
 
 I've been using Express since V.2, in 2012 and have seen it do just about everything. It is one of my favorite node modules and consistently one of the most downloaded on npm. There are other awesome technologies that patch into Express that get easily missed. This course will naturally lead into other things like websockets, webRTC, etc. Prepare for one of the most awesome node modules on npm!
-
-### Who this course is for:
-
-Beginner node developers who want to learn Express but overwhelmed by full MERN or MEAN courses
-Beginner node developers who need a review of JUST Express js
-Developers who want to go into the various pieces of Express in a little more depth without having to look at the docs
-Developers interested in using node as a webserver or using web sockets with Express
-
-### Requirements
-
-- You have a working knowledge of JavaScript (Not a ninja, but you should not be brand new).
-- You have at least run a Nodejs program before. I will cover some basics, but this is NOT an intro to node class.
-- You have basic command line knowledge (at least capable of navigating and running a program)
-- You have a computer capable of running Nodejs.
 
 ## Sections
 
@@ -57,6 +44,13 @@ Developers interested in using node as a webserver or using web sockets with Exp
 9. Best Practices (Coming...)
 
 10. Supplemental - connecting to various DBs (very basic - only for those already familiar with a database)
+
+### Who this course is for:
+
+- Beginner node developers who want to learn Express but overwhelmed by full MERN or MEAN courses
+- Beginner node developers who need a review of JUST Express js
+- Developers who want to go into the various pieces of Express in a little more depth without having to look at the docs
+- Developers interested in using node as a webserver or using web sockets with Express
 
 ### Requirements
 
@@ -357,7 +351,7 @@ Nothing added here
 ### 1. Passport and the github Strategy
 
 Intro to Passport:  
-https://www.passportjs.org/
+https://www.passportjs.org/  
 https://www.npmjs.com/package/passport  
 `npm i passport`
 
@@ -366,3 +360,6 @@ https://www.passportjs.org/concepts/authentication/middleware/
 passport-github:  
 https://www.passportjs.org/packages/passport-github2/  
 `npm install passport-github2`
+
+Register a new OAuth application  
+https://github.com/settings/applications/new

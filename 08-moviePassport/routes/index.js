@@ -23,7 +23,18 @@ router.get('/', function (req, res, next) {
   })
 })
 
-router.get('/login')
+router.get('/login', passport.authenticate('github'))
+
+app.post(
+  '/login/password',
+  passport.authenticate('local', {
+    failureRedirect: '/login',
+    failureMessage: true,
+  }),
+  function (req, res) {
+    res.redirect('/~' + req.user.username)
+  }
+)
 
 router.get('/movie/:id', (req, res, next) => {
   // res.json(req.params.id)

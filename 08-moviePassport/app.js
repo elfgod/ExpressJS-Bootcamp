@@ -1,3 +1,4 @@
+require('dotenv').config()
 var createError = require('http-errors')
 var express = require('express')
 var app = express()
@@ -7,8 +8,9 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 // ========== PASSPORT FILES ========== //
 const passport = require('passport')
-const GitHubStrategy = require('passport-github')
+const GitHubStrategy = require('passport-github2')
 // ==================== //
+console.log(GitHubStrategy)
 
 // const helmet = require('helmet')
 // app.use(
@@ -48,6 +50,34 @@ const GitHubStrategy = require('passport-github')
 // )
 
 var indexRouter = require('./routes/index')
+
+const clientID = process.env.CLIENT_ID
+const clientSecret = process.env.CLIENT_SECRET
+const callbackUrl = process.env.CALLBACK_URL
+
+console.log(clientID)
+console.log(clientSecret)
+console.log(callbackUrl)
+
+const passportConfig = {
+  clientID,
+  clientSecret,
+  callbackUrl,
+}
+
+// ========== PASSPORT CONFIG ========== //
+passport.use(
+  new GitHubStrategy(passportConfig, function (
+    accessToken,
+    refreshToken,
+    profile,
+    done
+  ) {
+    console.log(profile)
+    // return done(null, profile)
+  })
+)
+// ==================== //
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
